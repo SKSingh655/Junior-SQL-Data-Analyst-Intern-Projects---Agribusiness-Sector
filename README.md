@@ -69,6 +69,25 @@ A normalized relational database design for an agribusiness analytics platform c
 
 ---
 
+### ✅ Task 3 — ETL Process Plan (Week 3)
+
+> **Focus:** Public data extraction, data cleaning, SQL transformation, idempotent loading, monitoring
+
+A full ETL pipeline that extracts agribusiness data from public sources (Agmarknet, FAOSTAT, IMD), validates it through staging tables, routes invalid rows to a quarantine table, and loads clean facts into the curated database.
+
+📁 See [`task-3/`](./task-3/) for details.
+
+| File | Description |
+|---|---|
+| `sql/01_etl_schema.sql` | Batch audit, staging, crosswalk & curated extension tables |
+| `sql/03_staging_data.sql` | Simulated raw rows from 3 sources (valid + invalid for demo) |
+| `sql/04_transform_validate.sql` | Validation, reject routing, unit conversion, parsed temp tables |
+| `sql/05_load_curated.sql` | Idempotent upserts into `market_price`, `crop_production_stat`, `weather_observation` |
+| `sql/06_monitoring_tests.sql` | Batch health report, reconciliation, duplicate checks, cross-source analytics |
+| `python/etl_extraction_adapter.py` | Python extraction pseudocode (requests/pandas) |
+
+---
+
 ## Notes
 
 - All sample data is synthetic and for demonstration purposes only.
