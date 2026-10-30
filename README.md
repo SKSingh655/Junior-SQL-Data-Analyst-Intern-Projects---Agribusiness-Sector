@@ -88,6 +88,25 @@ A full ETL pipeline that extracts agribusiness data from public sources (Agmarkn
 
 ---
 
+### ✅ Task 4 — Data Aggregation & Business Reporting (Week 4)
+
+> **Focus:** SQL aggregation, KPI catalogue, reusable views, management report, visualization strategy
+
+A complete SQL reporting framework with 7 KPI views, 2 materialized views, and a full management report covering production, yield, market prices, livestock inventory, and data quality.
+
+📁 See [`task-4/`](./task-4/) for details.
+
+| File | Description |
+|---|---|
+| `views/01_kpi_views.sql` | 7 SQL views — one per KPI (production, yield, YoY change, price trend, price YoY, livestock snapshot, data quality) |
+| `views/02_materialized_views.sql` | 2 materialized views for dashboard performance; refresh after each ETL load |
+| `sql/01_production_yield_reports.sql` | Production ranking, yield comparison, YoY change, concentration analysis, farm deep-dive |
+| `sql/02_market_livestock_reports.sql` | Monthly price trend, market ranking, price volatility, livestock snapshot, combined production vs price |
+| `sql/03_reliability_performance.sql` | Data freshness, quality dashboard, reject breakdown, fan-out pitfall demo, EXPLAIN ANALYZE, reconciliation |
+| `sql/04_executive_report.sql` | Full management report — 6 sections in order: executive summary, production, trends, market, livestock, data quality |
+
+---
+
 ## Notes
 
 - All sample data is synthetic and for demonstration purposes only.
